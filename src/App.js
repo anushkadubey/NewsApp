@@ -3,7 +3,7 @@ import './App.css';
 import React, { useState } from 'react'
 import Navbar from './components/Navbar';
 import News from './components/News';
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import {HashRouter, Switch, Route} from "react-router-dom";
 import LoadingBar from 'react-top-loading-bar'
 
 const App = () => {
@@ -15,7 +15,7 @@ const App = () => {
 
     return (
       <div>
-        <Router>
+        <HashRouter>
         <Navbar/>
         <LoadingBar
         height={2.5}
@@ -31,7 +31,7 @@ const App = () => {
           <Route exact path="/sports"><News setProgress =  {setProgress}  apiKey={apiKey} key="sports" pageSize={6} country="in" category="sports" /></Route>
           <Route exact path="/technology"><News setProgress =  {setProgress}  apiKey={apiKey} key="technology" pageSize={6} country="in" category="technology" /></Route>
         </Switch>
-        </Router>
+        </HashRouter>
       </div>
     )
 }
