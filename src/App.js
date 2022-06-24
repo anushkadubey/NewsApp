@@ -22,7 +22,7 @@ const App = () => {
         color="#f11946"
         progress={progress} />
         <Switch>
-          <Route exact path="/"><News setProgress =  {setProgress}  apiKey={apiKey} key="general" pageSize={6} country="in" category="general" /></Route>
+          <Route exact path="/"><News setProgress =  {setProgress}  apiKey={apiKey}  pageSize={6} country="in" category="general" /></Route>
           <Route exact path="/business"><News setProgress =  {setProgress}  apiKey={apiKey} key="business" pageSize={6} country="in" category="business" /></Route>
           <Route exact path="/entertainment"><News setProgress =  {setProgress}  apiKey={apiKey} key="entertainment" pageSize={6} country="in" category="entertainment" /></Route>
           <Route exact path="/general"><News setProgress =  {setProgress}  apiKey={apiKey} key="general" pageSize={6} country="in" category="general" /></Route>
